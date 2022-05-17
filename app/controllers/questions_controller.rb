@@ -17,7 +17,8 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @question = Question.all
+    @question = Question.new
+    @questions = Question.all
   end
 
   def new
@@ -34,9 +35,9 @@ class QuestionsController < ApplicationController
   end
 
   def hide
-    @question.update(hidden:true)
+    @question.update(hidden: true)
 
-    redirect_to questions_path
+    redirect_to question_path
   end
 
   private

@@ -8,4 +8,5 @@
 *= require button
 *= require form
 *= require questions
- */
+*= require question
+*/
