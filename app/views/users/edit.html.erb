@@ -17,6 +17,9 @@
       <p class="mt"><%= form.label :nickname, 'Ник на сайте' %></p>
       <p><%= form.text_field :nickname, class: 'form-text-field' %></p>
 
+      <p class="mt"><%= form.label :header_color, 'Выберите цвет шапки вашего профиля' %></p>
+      <p><%= form.color_field :header_color, class: 'form-text-field' %></p>
+
       <p class="mt-lg text-sm">Если не хотите менять пароль — оставьте эти поля пустыми!</p>
 
       <p class="mt"><%= form.label :password, 'Пароль' %></p>
@@ -29,14 +32,13 @@
         <%= form.submit "Сохранить", class: 'button button-main' %>
         <span class="text-sm">или <%= link_to "вернуться", :back %></span>
       </p>
-
+    <% end %>
       <div class="mt-lg">
         <%= button_to "Удалить профиль", user_path(@user),
                       method: :delete,
                       form: {data: {turbo_confirm: "Вы точно хотите удалить свой профиль?"}},
                       class: 'text-red text-sm' %>
       </div>
-  <% end %>
   </div>
 </div>
 
