@@ -16,7 +16,7 @@
 </div>
 
 <% @questions.each do |question| %>
-  <%hidden_question = question.hidden? ? "question-hidden" : "question-visible" %>
+  <%hidden_question = question.hidden ? "question-hidden" : "question-visible" %>
   <%= content_tag :div, class: ["mb-sm", hidden_question] do %>
     <div class="mt-sm container">
       <%= render question %>
