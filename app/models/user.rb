@@ -11,6 +11,8 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, format: { with: REGEXP_EMAIL }
   validates :header_color, format: {with: REGEXP_COLOR }, on: :update
 
+  has_many :questions, dependent: :delete_all
+
   private
 
   def downcase_nickname
