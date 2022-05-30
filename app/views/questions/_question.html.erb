@@ -1,6 +1,6 @@
 <div class="mb-sm">
-  <%= simple_format h(question.body) %>
-  <div class="text-yellow">
+  <%=simple_format h(question.body) %>
+  <div class="text-yellow mt-sm">
     <p>Вопрос от: <% if question.author.present? %>
         <%= link_to "#{display_nickname(question.author)}",
                     user_path(question.author), class: 'mr-sm' %>
