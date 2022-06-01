@@ -25,9 +25,9 @@
       </div>
       <% end %>
 
-    <% if flash[:notice].present? %>
+    <% if flash_helper_notice %>
       <p class="mb mt message message-notice"><%= flash[:notice] %></p>
-    <% elsif flash[:alert].present? %>
+    <% elsif flash_helper_alert %>
       <p class="mb mt message message-alert"><%= flash[:alert] %></p>
     <% end %>
 
