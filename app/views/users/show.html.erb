@@ -11,7 +11,7 @@
 
 <% if @questions.any? %>
   <div class="container">
-    <%= link_to 'Спроси меня', new_question_path(user_id: @user.nickname),
+    <%= link_to 'Спроси меня', new_question_path(user_id: @user),
                 class: 'button button-yellow' %>
     <div class="mt">
       <%= render partial: 'questions/form', locals: {question: @question} %>
