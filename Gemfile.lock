@@ -224,7 +224,7 @@ DEPENDENCIES
   jbuilder
   pg
   puma (~> 5.0)
-  rails (~> 7.0.2, >= 7.0.2.3)
+  rails (~> 7.0.0)
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
@@ -234,7 +234,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.3.11
