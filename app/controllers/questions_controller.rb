@@ -33,7 +33,7 @@ class QuestionsController < ApplicationController
 
   def new
     @user = User.find(params[:user_id])
-    @question = Question.new(user_id: @user.id)
+    @question = Question.new(user: @user)
   end
 
   def edit

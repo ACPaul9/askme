@@ -23,13 +23,9 @@
           <%= link_to "Вход", new_session_path, class: 'button button-yellow' %>
         <% end %>
       </div>
-      <% end %>
-
-    <% if flash_helper_notice %>
-      <p class="mb mt message message-notice"><%= flash[:notice] %></p>
-    <% elsif flash_helper_alert %>
-      <p class="mb mt message message-alert"><%= flash[:alert] %></p>
     <% end %>
+
+    <%= flash_message(flash) %>
 
     <%= yield %>
   </div>
